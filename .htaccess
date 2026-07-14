@@ -1,0 +1,64 @@
+# ============================================================
+# CHOOSE TRAVEL - Rank Math SEO & Clean URL Rewrite Rules
+# ============================================================
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1. Force HTTPS and WWW (optional when deployed)
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.choose.travel%{REQUEST_URI} [L,NE,R=301]
+
+# 2. Specific Page Slug Rewrites (from Requirement Specification)
+RewriteRule ^about-us/?$ about.html [L,NC]
+RewriteRule ^destinations/?$ destinations.html [L,NC]
+RewriteRule ^destinations/kerala/?$ destination-detail.html [L,NC]
+RewriteRule ^tour-packages/?$ tour-packages.html [L,NC]
+RewriteRule ^tour-packages/kerala-family-tour/?$ package-detail.html [L,NC]
+RewriteRule ^travel-themes/?$ travel-themes.html [L,NC]
+RewriteRule ^travel-guides/?$ travel-guides.html [L,NC]
+RewriteRule ^gallery/?$ gallery.html [L,NC]
+RewriteRule ^testimonials/?$ testimonials.html [L,NC]
+RewriteRule ^blog/?$ blog.html [L,NC]
+RewriteRule ^blog/top-10-places-to-visit-in-kerala/?$ blog-detail.html [L,NC]
+RewriteRule ^faq/?$ faq.html [L,NC]
+RewriteRule ^contact-us/?$ contact.html [L,NC]
+RewriteRule ^plan-your-trip/?$ plan-your-trip.html [L,NC]
+RewriteRule ^travel-guides/kerala-complete-guide/?$ guide-detail.html [L,NC]
+
+# 3. Policy & Utility Routes
+RewriteRule ^privacy-policy/?$ privacy-policy.html [L,NC]
+RewriteRule ^refund-policy/?$ refund-policy.html [L,NC]
+RewriteRule ^terms-conditions/?$ terms-conditions.html [L,NC]
+RewriteRule ^search/?$ search-results.html [L,NC]
+RewriteRule ^admin/dashboard/?$ admin/dashboard.html [L,NC]
+
+# 4. Remove .html extension externally (301 redirect to clean slug)
+RewriteCond %{THE_REQUEST} /about\.html [NC]
+RewriteRule ^about\.html$ /about-us/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} /destinations\.html [NC]
+RewriteRule ^destinations\.html$ /destinations/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} /destination-detail\.html [NC]
+RewriteRule ^destination-detail\.html$ /destinations/kerala/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} /tour-packages\.html [NC]
+RewriteRule ^tour-packages\.html$ /tour-packages/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} /package-detail\.html [NC]
+RewriteRule ^package-detail\.html$ /tour-packages/kerala-family-tour/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} /contact\.html [NC]
+RewriteRule ^contact\.html$ /contact-us/ [R=301,L]
+
+# 5. Generic .html fallback if no rewrite rule matched
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 6. Custom 404 Error Page
+ErrorDocument 404 /404.html
+</IfModule>

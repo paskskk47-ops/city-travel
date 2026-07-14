@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Tour Packages in India | Family, Honeymoon & Adventure Tours | Choose Travel</title>
+  <meta name="description" content="Explore customized domestic tour packages across India. Discover family holidays, honeymoon packages, adventure trips, weekend getaways, and more with Choose Travel." />
+  <link rel="canonical" href="https://www.choose.travel/tour-packages/" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "name": "India Domestic Tour Packages",
+        "description": "Explore curated holiday packages across Kerala, Ooty, Kashmir, Goa, and Himachal Pradesh.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Kerala Backwaters & Tea Garden Paradise Tour",
+            "url": "https://www.choose.travel/tour-packages/kerala-family-tour/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kashmir Paradise on Earth Tour",
+            "url": "https://www.choose.travel/tour-packages/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Himachal Snow Adventure Tour",
+            "url": "https://www.choose.travel/tour-packages/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.choose.travel/tour-packages/#webpage",
+        "url": "https://www.choose.travel/tour-packages/",
+        "name": "Domestic Tour Packages – Kerala, Kashmir, Goa | Choose Travel",
+        "isPartOf": {
+          "@type": "TravelAgency",
+          "@id": "https://www.choose.travel/#organization",
+          "name": "Choose Travel",
+          "url": "https://www.choose.travel/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="packages">
+
+<div id="site-nav"></div>
+
+<section class="page-banner" style="background:linear-gradient(135deg, rgba(0,27,75,0.75) 0%, rgba(0,61,161,0.65) 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600&q=80') center/cover no-repeat;padding:100px 0 70px;">
+  <div class="container">
+    <div class="page-banner-content" style="max-width:680px;">
+      <h1 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;color:white;margin-bottom:14px;line-height:1.2;">Discover Your Perfect<br/><span style="color:#FFB800;">Holiday Package</span></h1>
+      <p style="font-size:1rem;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:28px;max-width:560px;">Explore carefully curated domestic tour packages across India. Whether you're planning a family vacation, honeymoon, adventure trip, or weekend getaway — Choose Travel has a package designed just for you.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="plan-your-trip.html" class="btn btn-lg" style="background:#FFB800;color:#0D1B2A;font-weight:800;padding:14px 32px;"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>Plan Your Trip</a>
+        <a href="contact.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:white;font-weight:700;padding:14px 28px;border:2px solid rgba(255,255,255,0.5);backdrop-filter:blur(8px);">Contact Us</a>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-top:24px;background:transparent;padding:0;justify-content:flex-start;">
+      <a href="index.html" style="color:rgba(255,255,255,.7);">Home</a><span style="color:rgba(255,255,255,.4);">›</span><span style="color:white;">Tour Packages</span>
+    </nav>
+  </div>
+</section>
+
+<!-- Top Filter Bar Section (Matching Picture3.png exactly) -->
+<div style="background:var(--gray-100);padding:24px 0;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <form id="topPackagesFilterForm" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;align-items:center;">
+      <div style="position:relative;">
+        <i class="fas fa-search" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-500);"></i>
+        <input type="text" class="form-control" id="pkgSearchInput" placeholder="Search tour packages..." style="padding-left:40px;height:48px;border-radius:10px;font-weight:500;" />
+      </div>
+      <div>
+        <select class="form-control" id="pkgDestSelect" style="height:48px;border-radius:10px;font-weight:500;">
+          <option value="all">All Destinations</option>
+          <option value="kerala">Kerala</option>
+          <option value="tamilnadu">Tamil Nadu</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="goa">Goa</option>
+          <option value="andaman">Andaman & Nicobar</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-control" id="pkgDurationSelect" style="height:48px;border-radius:10px;font-weight:500;">
+          <option value="all">All Durations</option>
+          <option value="short">1 - 3 Days</option>
+          <option value="medium">4 - 6 Days</option>
+          <option value="long">7 - 9 Days</option>
+          <option value="extended">10+ Days</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-control" id="pkgThemeSelect" style="height:48px;border-radius:10px;font-weight:500;">
+          <option value="all">All Themes</option>
+          <option value="family">Family Holidays</option>
+          <option value="honeymoon">Honeymoon</option>
+          <option value="adventure">Adventure</option>
+          <option value="beach">Beach Holidays</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" style="width:100%;height:48px;justify-content:center;font-size:.95rem;font-weight:700;border-radius:10px;">
+          Apply Filters
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Main Layout with Left Grid & Right Sidebar (Matching Picture3.png exactly) -->
+<section class="section-py">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 310px;gap:36px;align-items:start;" id="packagesMainLayout">
+      
+      <!-- LEFT COLUMN: Packages Grid -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:14px;">
+          <div style="font-size:1.05rem;font-weight:800;color:var(--dark);">120 Packages Found</div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:.85rem;color:var(--gray-600);font-weight:600;">Sort by:</span>
+            <select class="form-control" style="width:auto;padding:8px 14px;font-size:.88rem;height:38px;border-radius:8px;font-weight:600;">
+              <option>Popularity</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Duration: Short to Long</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 8 Package Cards Grid (2 Columns) -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
+          
+          <!-- Card 1: Kerala Backwaters -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala Backwaters" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#E74C3C;color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Popular</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kerala Backwaters Tour</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Kerala</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>4 Days / 3 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹14,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=kerala-backwaters" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Ooty Mysore Tour -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80" alt="Ooty Mysore" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#F5A623;color:#0D1B2A;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Best Seller</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Ooty Mysore Tour</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Tamil Nadu</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>5 Days / 4 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹16,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=ooty-mysore" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Coorg Nature Escape -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Coorg Nature Escape" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:var(--success);color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Trending</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Coorg Nature Escape</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Karnataka</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>5 Days / 4 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹11,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=coorg-escape" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Kodaikanal Getaway -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1544535830-9df3f56fff6a?w=600&q=80" alt="Kodaikanal Getaway" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#E91E63;color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Top Rated</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kodaikanal Getaway</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Tamil Nadu</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>3 Days / 2 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹9,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=kodaikanal-getaway" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 5: Andaman Paradise Tour -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Andaman Paradise" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#8E44AD;color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">New</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Andaman Paradise Tour</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Andaman & Nicobar</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>5 Days / 4 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹24,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=andaman-paradise" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 6: Goa Beach Holiday -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Goa Beach Holiday" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#E74C3C;color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Popular</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Goa Beach Holiday</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Goa</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>4 Days / 3 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹8,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=goa-holiday" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 7: Kashmir Heaven Tour -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80" alt="Kashmir Heaven Tour" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:#F5A623;color:#0D1B2A;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Best Seller</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kashmir Heaven Tour</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Jammu & Kashmir</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>6 Days / 5 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹18,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=kashmir-heaven" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+          <!-- Card 8: Rajasthan Heritage Tour -->
+          <div class="package-card" style="background:white;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="position:relative;height:190px;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80" alt="Rajasthan Heritage Tour" style="width:100%;height:100%;object-fit:cover;" />
+                <span style="position:absolute;top:12px;left:12px;background:var(--success);color:white;font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;">Trending</span>
+              </div>
+              <div style="padding:18px;">
+                <h3 style="font-size:1.18rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Rajasthan Heritage Tour</h3>
+                <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i>Rajasthan</div>
+                <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:14px;"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i>6 Days / 5 Nights</div>
+                <div style="font-size:1.35rem;font-weight:900;color:var(--dark);">₹17,999/-</div>
+                <div style="font-size:.75rem;color:var(--gray-500);">Per Person</div>
+              </div>
+            </div>
+            <div style="padding:0 18px 18px;">
+              <a href="package-detail.html?pkg=rajasthan-heritage" class="btn btn-outline" style="width:100%;justify-content:center;border-radius:8px;padding:10px;font-weight:700;">Enquiry Now</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pagination (Matching Picture3.png exactly) -->
+        <div style="display:flex;justify-content:center;align-items:center;gap:8px;margin-top:48px;">
+          <a href="#" class="btn btn-primary btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:800;border-radius:8px;">1</a>
+          <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">2</a>
+          <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">3</a>
+          <span style="color:var(--gray-500);font-weight:700;padding:0 4px;">...</span>
+          <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">5</a>
+          <a href="#" class="btn btn-outline btn-sm" style="padding:8px 18px;font-weight:700;border-radius:8px;">Next</a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Sidebar Filters (Matching Picture3.png exactly) -->
+      <aside style="background:white;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow-sm);padding:24px;position:sticky;top:90px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+          <h3 style="font-size:1.05rem;font-weight:800;color:var(--dark);letter-spacing:.5px;">FILTER PACKAGES</h3>
+          <a href="#" style="font-size:.82rem;font-weight:700;color:var(--primary);">Reset All</a>
+        </div>
+
+        <!-- DESTINATION -->
+        <div style="margin-bottom:24px;">
+          <label style="font-size:.82rem;font-weight:800;color:var(--gray-700);text-transform:uppercase;display:block;margin-bottom:10px;letter-spacing:.5px;">DESTINATION</label>
+          <div style="position:relative;margin-bottom:12px;">
+            <i class="fas fa-search" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray-500);font-size:.85rem;"></i>
+            <input type="text" placeholder="Search destination..." style="width:100%;height:38px;padding-left:34px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;" />
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;max-height:160px;overflow-y:auto;">
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" checked /> Kerala
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Tamil Nadu
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Karnataka
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Goa
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Andaman & Nicobar
+            </label>
+          </div>
+          <a href="#" style="display:block;font-size:.82rem;font-weight:700;color:var(--primary);margin-top:10px;">+ Show More</a>
+        </div>
+
+        <!-- DURATION -->
+        <div style="margin-bottom:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <label style="font-size:.82rem;font-weight:800;color:var(--gray-700);text-transform:uppercase;display:block;margin-bottom:12px;letter-spacing:.5px;">DURATION</label>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> 1 - 3 Days
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" checked /> 4 - 6 Days
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> 7 - 9 Days
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> 10+ Days
+            </label>
+          </div>
+        </div>
+
+        <!-- THEME -->
+        <div style="margin-bottom:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <label style="font-size:.82rem;font-weight:800;color:var(--gray-700);text-transform:uppercase;display:block;margin-bottom:12px;letter-spacing:.5px;">THEME</label>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" checked /> Family Holidays
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Honeymoon
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Adventure
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Beach Holidays
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-700);cursor:pointer;">
+              <input type="checkbox" /> Nature & Wildlife
+            </label>
+          </div>
+          <a href="#" style="display:block;font-size:.82rem;font-weight:700;color:var(--primary);margin-top:10px;">+ Show More</a>
+        </div>
+
+        <!-- BUDGET (PER PERSON) -->
+        <div style="margin-bottom:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <label style="font-size:.82rem;font-weight:800;color:var(--gray-700);text-transform:uppercase;display:block;margin-bottom:12px;letter-spacing:.5px;">BUDGET (PER PERSON)</label>
+          <input type="range" min="5000" max="50000" value="25000" style="width:100%;accent-color:var(--primary);margin-bottom:8px;" />
+          <div style="display:flex;justify-content:space-between;font-size:.82rem;font-weight:800;color:var(--dark);">
+            <span>₹5,000</span>
+            <span>₹50,000+</span>
+          </div>
+        </div>
+
+        <!-- Best Price Guarantee Badge Box at Bottom -->
+        <div style="background:var(--primary-light);border-radius:14px;padding:16px;display:flex;align-items:flex-start;gap:12px;margin-top:28px;">
+          <i class="fas fa-shield-alt" style="color:var(--primary);font-size:1.5rem;margin-top:2px;"></i>
+          <div>
+            <strong style="font-size:.9rem;color:var(--dark);display:block;margin-bottom:2px;">Best Price Guarantee</strong>
+            <span style="font-size:.8rem;color:var(--gray-700);line-height:1.4;display:block;">We offer the best prices with no hidden charges.</span>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BROWSE BY CATEGORY
+     ============================================================ -->
+<section class="section-py" style="background:var(--gray-100);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h2 class="section-title">BROWSE BY <span style="color:var(--primary);">CATEGORY</span></h2>
+      <p class="section-subtitle">Find the perfect holiday type that matches your travel style.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+      <a href="tour-packages.html?cat=family" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">👨‍👩‍👧</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Family Holidays</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">For all age groups</div>
+      </a>
+      <a href="tour-packages.html?cat=honeymoon" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">❤️</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Honeymoon</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Romantic getaways</div>
+      </a>
+      <a href="tour-packages.html?cat=adventure" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🏔️</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Adventure</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Thrilling experiences</div>
+      </a>
+      <a href="tour-packages.html?cat=beach" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🏖️</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Beach Holidays</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Sun, sand & sea</div>
+      </a>
+      <a href="tour-packages.html?cat=weekend" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🚗</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Weekend Getaways</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">2–3 night trips</div>
+      </a>
+      <a href="tour-packages.html?cat=luxury" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">✨</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Luxury Tours</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Premium experiences</div>
+      </a>
+      <a href="tour-packages.html?cat=pilgrimage" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🙏</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Pilgrimage</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Sacred journeys</div>
+      </a>
+      <a href="tour-packages.html?cat=group" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">👥</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Group Tours</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">10+ travelers</div>
+      </a>
+      <a href="tour-packages.html?cat=student" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🎓</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Student Tours</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Educational travel</div>
+      </a>
+      <a href="tour-packages.html?cat=corporate" style="text-decoration:none;background:white;border-radius:18px;padding:28px 16px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s;display:block;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--primary)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='var(--border)'">
+        <div style="font-size:2rem;margin-bottom:12px;">🏢</div>
+        <div style="font-weight:800;font-size:.92rem;color:var(--dark);margin-bottom:4px;">Corporate Tours</div>
+        <div style="font-size:.78rem;color:var(--gray-500);">Team outings</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE OUR PACKAGES
+     ============================================================ -->
+<section class="section-py" style="background:white;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;">
+      <h2 class="section-title">WHY CHOOSE <span style="color:var(--primary);">OUR PACKAGES</span></h2>
+      <p class="section-subtitle">We go beyond booking — we craft experiences you'll cherish forever.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-route" style="font-size:2rem;color:var(--primary);margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Personalized Itineraries</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Every trip is custom-designed around your interests, travel dates, and budget.</p>
+      </div>
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-hotel" style="font-size:2rem;color:var(--accent);margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Comfortable Stays</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Handpicked hotels and resorts chosen for comfort, location, and value.</p>
+      </div>
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-headset" style="font-size:2rem;color:var(--success);margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Trusted Travel Planning</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Expert travel planners who guide you before, during, and after your trip.</p>
+      </div>
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-sliders-h" style="font-size:2rem;color:#9B59B6;margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Flexible Customization</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Change dates, hotels, or add destinations — we adapt to your needs.</p>
+      </div>
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-shield-alt" style="font-size:2rem;color:#E74C3C;margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Best Value</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Competitive pricing with no hidden charges and transparent cost breakdown.</p>
+      </div>
+      <div style="padding:28px;border-radius:18px;border:1px solid var(--border);background:var(--gray-100);">
+        <i class="fas fa-star" style="font-size:2rem;color:#FFB800;margin-bottom:16px;display:block;"></i>
+        <h3 style="font-size:1rem;font-weight:800;margin-bottom:8px;">Expert Assistance</h3>
+        <p style="font-size:.88rem;color:var(--gray-700);line-height:1.6;">Experienced travel experts who handle every detail of your journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS – 5 STEPS
+     ============================================================ -->
+<section class="section-py" style="background:linear-gradient(135deg,#001B4B 0%,#003DA1 100%);color:white;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;">
+      <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:white;margin-bottom:10px;">HOW IT <span style="color:#FFB800;">WORKS</span></h2>
+      <p style="color:rgba(255,255,255,0.75);font-size:.95rem;">Simple steps from enquiry to unforgettable travel.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;">
+      <div style="text-align:center;padding:0 12px;">
+        <div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,0.1);border:2px solid #FFB800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:#FFB800;"><i class="fas fa-map-marker-alt"></i></div>
+        <div style="background:#FFB800;color:#0D1B2A;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;">01</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:white;margin-bottom:6px;">Choose Destination</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.7);">Pick from our curated destinations or tell us where you want to go.</p>
+      </div>
+      <div style="text-align:center;padding:0 12px;">
+        <div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;"><i class="fas fa-search"></i></div>
+        <div style="background:rgba(255,255,255,0.15);color:white;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;">02</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:white;margin-bottom:6px;">Select a Package</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.7);">Browse our packages and find one that fits your style and budget.</p>
+      </div>
+      <div style="text-align:center;padding:0 12px;">
+        <div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;"><i class="fas fa-sliders-h"></i></div>
+        <div style="background:rgba(255,255,255,0.15);color:white;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;">03</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:white;margin-bottom:6px;">Customize Itinerary</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.7);">We personalize your plan — hotels, dates, activities, and more.</p>
+      </div>
+      <div style="text-align:center;padding:0 12px;">
+        <div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;"><i class="fas fa-envelope"></i></div>
+        <div style="background:rgba(255,255,255,0.15);color:white;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;">04</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:white;margin-bottom:6px;">Send Enquiry</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.7);">Submit your requirements and we'll prepare a free personalized quote.</p>
+      </div>
+      <div style="text-align:center;padding:0 12px;">
+        <div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;"><i class="fas fa-suitcase-rolling"></i></div>
+        <div style="background:rgba(255,255,255,0.15);color:white;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;">05</div>
+        <h3 style="font-size:.95rem;font-weight:700;color:white;margin-bottom:6px;">Travel with Confidence</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.7);">Enjoy a seamless, worry-free holiday crafted just for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="section-py" style="background:var(--gray-100);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;">
+      <h2 class="section-title">WHAT OUR <span style="color:var(--primary);">TRAVELERS SAY</span></h2>
+      <p class="section-subtitle">Real experiences from real travelers who explored India with Choose Travel.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+      <div style="background:white;border-radius:20px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);">
+        <div style="color:#FFB800;font-size:1.1rem;margin-bottom:14px;">★★★★★</div>
+        <p style="font-size:.9rem;color:var(--gray-700);line-height:1.7;margin-bottom:18px;font-style:italic;">&ldquo;Our Kerala trip was perfectly organized. The houseboat experience was a dream come true. Highly recommended!&rdquo;</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:1rem;color:white;font-weight:800;">R</div>
+          <div>
+            <div style="font-weight:800;font-size:.9rem;color:var(--dark);">Rahul Sharma</div>
+            <div style="font-size:.78rem;color:var(--gray-500);">Hyderabad · Kerala Family Tour</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);">
+        <div style="color:#FFB800;font-size:1.1rem;margin-bottom:14px;">★★★★★</div>
+        <p style="font-size:.9rem;color:var(--gray-700);line-height:1.7;margin-bottom:18px;font-style:italic;">&ldquo;Excellent service and customized itinerary. Our Kashmir honeymoon exceeded every expectation. Thank you!&rdquo;</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#E91E63,#FF5722);display:flex;align-items:center;justify-content:center;font-size:1rem;color:white;font-weight:800;">P</div>
+          <div>
+            <div style="font-weight:800;font-size:.9rem;color:var(--dark);">Priya &amp; Arjun</div>
+            <div style="font-size:.78rem;color:var(--gray-500);">Bengaluru · Kashmir Honeymoon</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);">
+        <div style="color:#FFB800;font-size:1.1rem;margin-bottom:14px;">★★★★★</div>
+        <p style="font-size:.9rem;color:var(--gray-700);line-height:1.7;margin-bottom:18px;font-style:italic;">&ldquo;Smooth experience from planning to return. The Goa trip was everything we hoped for. Great team!&rdquo;</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--success),#00B894);display:flex;align-items:center;justify-content:center;font-size:1rem;color:white;font-weight:800;">A</div>
+          <div>
+            <div style="font-weight:800;font-size:.9rem;color:var(--dark);">Anita Verma</div>
+            <div style="font-size:.78rem;color:var(--gray-500);">Mumbai · Goa Beach Holiday</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section-py" style="background:white;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;">
+      <h2 class="section-title">FREQUENTLY ASKED <span style="color:var(--primary);">QUESTIONS</span></h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;" class="faq-pkg-item">
+        <button onclick="togglePkgFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:white;border:none;cursor:pointer;font-size:.95rem;font-weight:700;color:var(--dark);text-align:left;gap:12px;">
+          Can I customize any package? <i class="fas fa-plus" style="color:var(--primary);font-size:.85rem;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;padding:0 22px 18px;font-size:.88rem;color:var(--gray-700);line-height:1.7;">Yes. Every package can be customized based on your travel dates, preferences, budget, and group size.</div>
+      </div>
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;" class="faq-pkg-item">
+        <button onclick="togglePkgFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:white;border:none;cursor:pointer;font-size:.95rem;font-weight:700;color:var(--dark);text-align:left;gap:12px;">
+          Are flights included? <i class="fas fa-plus" style="color:var(--primary);font-size:.85rem;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;padding:0 22px 18px;font-size:.88rem;color:var(--gray-700);line-height:1.7;">Packages can be planned with or without flights depending on your requirements. Just let us know your preference.</div>
+      </div>
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;" class="faq-pkg-item">
+        <button onclick="togglePkgFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:white;border:none;cursor:pointer;font-size:.95rem;font-weight:700;color:var(--dark);text-align:left;gap:12px;">
+          Do you arrange hotel bookings? <i class="fas fa-plus" style="color:var(--primary);font-size:.85rem;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;padding:0 22px 18px;font-size:.88rem;color:var(--gray-700);line-height:1.7;">Yes. We assist with hotel bookings, transportation, sightseeing, and complete itinerary planning.</div>
+      </div>
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;" class="faq-pkg-item">
+        <button onclick="togglePkgFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:white;border:none;cursor:pointer;font-size:.95rem;font-weight:700;color:var(--dark);text-align:left;gap:12px;">
+          Can I travel with my family? <i class="fas fa-plus" style="color:var(--primary);font-size:.85rem;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;padding:0 22px 18px;font-size:.88rem;color:var(--gray-700);line-height:1.7;">Absolutely. We offer customized family-friendly holiday packages for all group sizes and age groups.</div>
+      </div>
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;" class="faq-pkg-item">
+        <button onclick="togglePkgFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:white;border:none;cursor:pointer;font-size:.95rem;font-weight:700;color:var(--dark);text-align:left;gap:12px;">
+          How do I enquire? <i class="fas fa-plus" style="color:var(--primary);font-size:.85rem;flex-shrink:0;"></i>
+        </button>
+        <div style="display:none;padding:0 22px 18px;font-size:.88rem;color:var(--gray-700);line-height:1.7;">Simply click Enquiry Now or complete the enquiry form below and our travel experts will contact you within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+function togglePkgFAQ(btn) {
+  const answer = btn.nextElementSibling;
+  document.querySelectorAll('.faq-pkg-item button').forEach(b => { if(b!==btn){b.nextElementSibling.style.display='none';b.querySelector('i').style.transform='';b.parentElement.style.borderColor='var(--border)';b.parentElement.style.background='white';}});
+  const isOpen = answer.style.display === 'block';
+  answer.style.display = isOpen ? 'none' : 'block';
+  btn.querySelector('i').style.transform = isOpen ? '' : 'rotate(45deg)';
+  btn.parentElement.style.borderColor = isOpen ? 'var(--border)' : 'var(--primary)';
+  btn.parentElement.style.background = isOpen ? 'white' : 'var(--primary-light)';
+}
+</script>
+
+<!-- ============================================================
+     ENQUIRY FORM
+     ============================================================ -->
+<section class="section-py" style="background:linear-gradient(135deg,#001B4B 0%,#003DA1 100%);">
+  <div class="container">
+    <div style="max-width:820px;margin:0 auto;background:rgba(255,255,255,0.07);border-radius:24px;padding:48px;border:1px solid rgba(255,255,255,0.15);">
+      <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:white;margin-bottom:10px;text-align:center;">Didn't Find Your Perfect Package?</h2>
+      <p style="color:rgba(255,255,255,0.75);text-align:center;margin-bottom:36px;">Tell us your requirements and we'll create a customized holiday just for you.</p>
+      <form style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;" onsubmit="handlePkgEnquiry(event)">
+        <div><input type="text" placeholder="Your Name *" required style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:white;font-size:.93rem;" /></div>
+        <div><input type="tel" placeholder="Phone Number *" required style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:white;font-size:.93rem;" /></div>
+        <div><input type="email" placeholder="Email Address" style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:white;font-size:.93rem;" /></div>
+        <div><select style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);font-size:.93rem;">
+          <option value="" style="color:#333;">Select Destination</option>
+          <option style="color:#333;">Kerala</option>
+          <option style="color:#333;">Goa</option>
+          <option style="color:#333;">Kashmir</option>
+          <option style="color:#333;">Ooty</option>
+          <option style="color:#333;">Coorg</option>
+          <option style="color:#333;">Andaman</option>
+          <option style="color:#333;">Rajasthan</option>
+          <option style="color:#333;">Other</option>
+        </select></div>
+        <div><select style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);font-size:.93rem;">
+          <option value="" style="color:#333;">Travel Month</option>
+          <option style="color:#333;">January</option><option style="color:#333;">February</option><option style="color:#333;">March</option>
+          <option style="color:#333;">April</option><option style="color:#333;">May</option><option style="color:#333;">June</option>
+          <option style="color:#333;">July</option><option style="color:#333;">August</option><option style="color:#333;">September</option>
+          <option style="color:#333;">October</option><option style="color:#333;">November</option><option style="color:#333;">December</option>
+        </select></div>
+        <div><select style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);font-size:.93rem;">
+          <option value="" style="color:#333;">Budget Range</option>
+          <option style="color:#333;">&#8377;15,000 – &#8377;30,000</option>
+          <option style="color:#333;">&#8377;30,000 – &#8377;50,000</option>
+          <option style="color:#333;">&#8377;50,000 – &#8377;75,000</option>
+          <option style="color:#333;">&#8377;75,000+</option>
+          <option style="color:#333;">Flexible</option>
+        </select></div>
+        <div style="grid-column:1/-1;"><textarea placeholder="Special requirements or message..." rows="3" style="width:100%;padding:14px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);color:white;font-size:.93rem;resize:vertical;"></textarea></div>
+        <div style="grid-column:1/-1;display:flex;gap:14px;flex-wrap:wrap;">
+          <button type="submit" style="flex:1;min-width:200px;background:#FFB800;color:#0D1B2A;font-weight:800;padding:15px 32px;border:none;border-radius:12px;font-size:1rem;cursor:pointer;"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>Get Free Travel Plan</button>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I'm%20interested%20in%20a%20tour%20package" target="_blank" style="flex:1;min-width:200px;background:#25D366;color:white;font-weight:800;padding:15px 32px;border-radius:12px;font-size:1rem;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fab fa-whatsapp"></i>WhatsApp Us</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+function handlePkgEnquiry(e) {
+  e.preventDefault();
+  alert('Thank you! Our travel expert will contact you within 24 hours.');
+  e.target.reset();
+}
+</script>
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

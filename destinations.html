@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations | Choose Travel – Explore India's Best Places</title>
+  <meta name="description" content="Explore top travel destinations across India with Choose Travel. Find tour packages for Kerala, Munnar, Ooty, Coorg, Andaman, Goa, Kashmir and more." />
+  <link rel="canonical" href="https://www.choose.travel/destinations/" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "name": "India Tourist Destinations",
+        "description": "Explore incredible domestic travel destinations across India with Choose Travel.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Kerala - God's Own Country",
+            "url": "https://www.choose.travel/destinations/kerala/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ooty & Coorg - Queen of Nilgiris",
+            "url": "https://www.choose.travel/destinations/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Goa - Sun, Sand & Sea",
+            "url": "https://www.choose.travel/destinations/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Himachal Pradesh - Valley of Gods",
+            "url": "https://www.choose.travel/destinations/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Kashmir - Paradise on Earth",
+            "url": "https://www.choose.travel/destinations/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.choose.travel/destinations/#webpage",
+        "url": "https://www.choose.travel/destinations/",
+        "name": "Explore Top Destinations in India | Choose Travel",
+        "isPartOf": {
+          "@type": "TravelAgency",
+          "@id": "https://www.choose.travel/#organization",
+          "name": "Choose Travel"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="destinations">
+
+<div id="site-nav"></div>
+
+<!-- Hero Banner (Matching Picture2.png) -->
+<section class="page-banner" style="background:linear-gradient(135deg, rgba(0,27,75,0.7) 0%, rgba(0,21,59,0.6) 100%), url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1600&q=80') center/cover no-repeat;padding:80px 0 60px;">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>DESTINATIONS</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>›</span><span>Destinations</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar Section (Matching Picture2.png) -->
+<div style="background:var(--gray-100);padding:24px 0;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <form id="destinationsFilterForm" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;align-items:center;">
+      <div style="position:relative;">
+        <i class="fas fa-search" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-500);"></i>
+        <input type="text" class="form-control" id="destSearchInput" placeholder="Search Destination..." style="padding-left:40px;height:48px;border-radius:10px;font-weight:500;" />
+      </div>
+      <div>
+        <select class="form-control" id="regionSelect" style="height:48px;border-radius:10px;font-weight:500;">
+          <option value="all">All Regions</option>
+          <option value="south">South India</option>
+          <option value="north">North India</option>
+          <option value="west">West India</option>
+          <option value="islands">Islands</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-control" id="typeSelect" style="height:48px;border-radius:10px;font-weight:500;">
+          <option value="all">All Types</option>
+          <option value="hill">Hill Station</option>
+          <option value="beach">Beach Holiday</option>
+          <option value="nature">Nature & Wildlife</option>
+          <option value="heritage">Heritage & Culture</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" style="width:100%;height:48px;justify-content:center;font-size:.95rem;font-weight:700;border-radius:10px;">
+          Apply Filters
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Destinations Grid Section (Matching Picture2.png exactly) -->
+<section class="section-py">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:24px;" id="destinationsGrid">
+      
+      <!-- Card 1: Kerala -->
+      <a href="destination-detail.html?dest=kerala" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kerala</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">God's Own Country</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 12 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Munnar -->
+      <a href="destination-detail.html?dest=munnar" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&q=80" alt="Munnar" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Munnar</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">The Kashmir of South India</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 18 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Ooty -->
+      <a href="destination-detail.html?dest=ooty" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80" alt="Ooty" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Ooty</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Queen of Hill Stations</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 10 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: Coorg -->
+      <a href="destination-detail.html?dest=coorg" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Coorg" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Coorg</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Scotland of India</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 14 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 5: Kodaikanal -->
+      <a href="destination-detail.html?dest=kodaikanal" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1544535830-9df3f56fff6a?w=600&q=80" alt="Kodaikanal" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kodaikanal</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Princess of Hill Stations</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 8 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 6: Andaman -->
+      <a href="destination-detail.html?dest=andaman" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Andaman" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Andaman</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Tropical Paradise</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 15 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 7: Goa -->
+      <a href="destination-detail.html?dest=goa" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Goa" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Goa</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Beach Paradise</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 12 Tour Packages
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 8: Kashmir -->
+      <a href="destination-detail.html?dest=kashmir" class="dest-card" style="background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:flex-start;">
+        <div style="height:210px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80" alt="Kashmir" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div style="padding:18px;">
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--dark);margin-bottom:4px;">Kashmir</h3>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:14px;">Heaven on Earth</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--primary);background:var(--primary-light);padding:6px 14px;border-radius:50px;">
+            <i class="fas fa-suitcase-rolling"></i> 9 Tour Packages
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Pagination (Matching Picture2.png exactly) -->
+    <div style="display:flex;justify-content:center;align-items:center;gap:8px;margin-top:48px;">
+      <a href="#" class="btn btn-primary btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:800;border-radius:8px;">1</a>
+      <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">2</a>
+      <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">3</a>
+      <span style="color:var(--gray-500);font-weight:700;padding:0 4px;">...</span>
+      <a href="#" class="btn btn-outline btn-sm" style="width:40px;height:40px;padding:0;justify-content:center;font-weight:700;border-radius:8px;">5</a>
+      <a href="#" class="btn btn-outline btn-sm" style="padding:8px 18px;font-weight:700;border-radius:8px;">Next</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section style="background:var(--primary);padding:60px 0;text-align:center;color:white;">
+  <div class="container">
+    <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:white;margin-bottom:16px;">Ready for Your Next Adventure?</h2>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 32px;">Let's create unforgettable memories together.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <a href="plan-your-trip.html" class="btn btn-lg" style="background:#FFB800;color:#0D1B2A;font-weight:800;padding:16px 40px;font-size:1.05rem;border-radius:12px;box-shadow:0 6px 20px rgba(255,184,0,0.4);">
+        Plan Your Trip
+      </a>
+      <a href="contact.html" class="btn btn-lg" style="background:white;color:var(--primary);font-weight:800;padding:16px 40px;font-size:1.05rem;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.1);">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

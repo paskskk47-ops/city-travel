@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Trip | Custom Tour Planner – Choose Travel</title>
+  <meta name="description" content="Use our free trip planner to build your perfect India holiday. Tell us your destination, travel dates, budget and preferences — get a personalized itinerary in minutes!">
+  <link rel="canonical" href="https://www.choose.travel/plan-your-trip/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.choose.travel/plan-your-trip/#service",
+        "name": "Customized India Tour Itinerary Planning Service",
+        "description": "Interactive online AI and human expert-backed trip planning tool. Get customized holiday itineraries and quotes for Kerala, Ooty, Goa, and Himachal within 2 hours.",
+        "provider": {
+          "@type": "TravelAgency",
+          "@id": "https://www.choose.travel/#organization",
+          "name": "Choose Travel"
+        },
+        "serviceType": "Holiday Itinerary Customization and Quotation"
+      }
+    ]
+  }
+  </script>
+  <style>
+    .planner-bg {
+      background: linear-gradient(135deg, #EBF5FF 0%, #F7FAFC 50%, #FEF3E2 100%);
+      min-height: calc(100vh - 140px);
+      padding: 60px 0;
+    }
+    .why-planner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 820px; margin: 0 auto 40px; }
+    .why-item { text-align: center; }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem; }
+    .why-label { font-size: .85rem; font-weight: 700; color: var(--dark); }
+    .why-sub { font-size: .76rem; color: var(--gray-500); }
+  </style>
+</head>
+<body data-page="">
+<div id="site-nav"></div>
+
+<section class="page-banner">
+  <div class="container"><div class="page-banner-content">
+    <h1>Plan Your Trip</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>›</span><span>Plan Your Trip</span></nav>
+  </div></div>
+</section>
+
+<div class="planner-bg">
+  <div class="container">
+
+    <!-- Why use Planner -->
+    <div class="why-planner reveal">
+      <div class="why-item">
+        <div class="why-icon" style="background:#EBF5FF;color:var(--primary);"><i class="fas fa-sliders-h"></i></div>
+        <div class="why-label">100% Customizable</div>
+        <div class="why-sub">Every detail tailored to you</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon" style="background:#E8F8F0;color:var(--success);"><i class="fas fa-rupee-sign"></i></div>
+        <div class="why-label">Best Price Guarantee</div>
+        <div class="why-sub">We match any quote</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon" style="background:#FEF3E2;color:var(--accent);"><i class="fas fa-bolt"></i></div>
+        <div class="why-label">Get Quote in 2 Hours</div>
+        <div class="why-sub">Expert response guaranteed</div>
+      </div>
+    </div>
+
+    <!-- Planner Card -->
+    <div class="planner-card reveal">
+      <!-- Progress -->
+      <div class="planner-progress"><div class="planner-progress-fill" id="plannerProgress" style="width:20%;"></div></div>
+      <div style="text-align:right;font-size:.8rem;color:var(--gray-500);margin-bottom:16px;"><span id="progressText">Step 1 of 5</span></div>
+
+      <!-- Step indicators -->
+      <div class="planner-steps">
+        <div class="step-item active" id="stepInd1">
+          <div class="step-circle">1</div>
+          <div class="step-label">Destination</div>
+        </div>
+        <div class="step-item" id="stepInd2">
+          <div class="step-circle">2</div>
+          <div class="step-label">Travel Theme</div>
+        </div>
+        <div class="step-item" id="stepInd3">
+          <div class="step-circle">3</div>
+          <div class="step-label">Duration & Date</div>
+        </div>
+        <div class="step-item" id="stepInd4">
+          <div class="step-circle">4</div>
+          <div class="step-label">Budget</div>
+        </div>
+        <div class="step-item" id="stepInd5">
+          <div class="step-circle">5</div>
+          <div class="step-label">Your Details</div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 1: Destination ====== -->
+      <div class="planner-step-panel active" id="step1">
+        <div class="planner-step-title">Where do you want to go?</div>
+        <div class="planner-step-sub">Choose your preferred destination(s). You can select multiple!</div>
+        <div class="dest-options-grid">
+          <div class="dest-option" onclick="toggleSelect(this,'Kerala')">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=200&q=75" alt="Kerala">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Kerala</div>
+              <div class="dest-option-meta">Backwaters · 45 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Goa')">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=200&q=75" alt="Goa">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Goa</div>
+              <div class="dest-option-meta">Beaches · 28 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Rajasthan')">
+            <img src="https://images.unsplash.com/photo-1477587458883-47145ed6736c?w=200&q=75" alt="Rajasthan">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Rajasthan</div>
+              <div class="dest-option-meta">Heritage · 34 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Andaman')">
+            <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=200&q=75" alt="Andaman">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Andaman</div>
+              <div class="dest-option-meta">Islands · 19 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Kashmir')">
+            <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=200&q=75" alt="Kashmir">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Kashmir</div>
+              <div class="dest-option-meta">Mountains · 24 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Himachal Pradesh')">
+            <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=200&q=75" alt="Himachal">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Himachal Pradesh</div>
+              <div class="dest-option-meta">Manali, Shimla · 26 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Coorg/Ooty')">
+            <img src="https://images.unsplash.com/photo-1620766182978-a1ba0c77f0b2?w=200&q=75" alt="Coorg">
+            <div class="dest-option-info">
+              <div class="dest-option-name">Coorg / Ooty</div>
+              <div class="dest-option-meta">Hill Stations · 38 Packages</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+          <div class="dest-option" onclick="toggleSelect(this,'Not Sure – Help Me Choose')">
+            <div style="width:60px;height:50px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-magic" style="color:var(--primary);font-size:1.2rem;"></i></div>
+            <div class="dest-option-info">
+              <div class="dest-option-name">Not Sure Yet</div>
+              <div class="dest-option-meta">Our experts will suggest!</div>
+            </div>
+            <i class="fas fa-check-circle" style="color:var(--primary);display:none;" class="check-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 2: Theme ====== -->
+      <div class="planner-step-panel" id="step2">
+        <div class="planner-step-title">What kind of trip is this?</div>
+        <div class="planner-step-sub">Select your travel theme. This helps us tailor the perfect itinerary.</div>
+        <div class="option-grid">
+          <div class="option-btn" onclick="selectOption(this,'Honeymoon')">
+            <div class="option-icon"><i class="fas fa-heart"></i></div>
+            <div class="option-label">Honeymoon</div>
+            <div class="option-sub">Romantic & intimate</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Family')">
+            <div class="option-icon"><i class="fas fa-home"></i></div>
+            <div class="option-label">Family Holiday</div>
+            <div class="option-sub">Kids & all ages</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Friends')">
+            <div class="option-icon"><i class="fas fa-users"></i></div>
+            <div class="option-label">Friends Group</div>
+            <div class="option-sub">Fun & bonding</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Adventure')">
+            <div class="option-icon"><i class="fas fa-hiking"></i></div>
+            <div class="option-label">Adventure</div>
+            <div class="option-sub">Trekking, water sports</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Pilgrimage')">
+            <div class="option-icon"><i class="fas fa-pray"></i></div>
+            <div class="option-label">Pilgrimage</div>
+            <div class="option-sub">Spiritual journey</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Weekend Getaway')">
+            <div class="option-icon"><i class="fas fa-coffee"></i></div>
+            <div class="option-label">Weekend Getaway</div>
+            <div class="option-sub">Short 2–3 day trips</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Luxury')">
+            <div class="option-icon"><i class="fas fa-gem"></i></div>
+            <div class="option-label">Luxury Escape</div>
+            <div class="option-sub">5-star, premium experience</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Solo')">
+            <div class="option-icon"><i class="fas fa-user"></i></div>
+            <div class="option-label">Solo Travel</div>
+            <div class="option-sub">Independent exploration</div>
+          </div>
+          <div class="option-btn" onclick="selectOption(this,'Corporate')">
+            <div class="option-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="option-label">Corporate Trip</div>
+            <div class="option-sub">Team outing, retreat</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 3: Duration & Date ====== -->
+      <div class="planner-step-panel" id="step3">
+        <div class="planner-step-title">When and for how long?</div>
+        <div class="planner-step-sub">Select your preferred travel duration and travel month.</div>
+
+        <div style="margin-bottom:24px;">
+          <label style="font-size:.9rem;font-weight:700;color:var(--dark);display:block;margin-bottom:12px;">Trip Duration</label>
+          <div class="option-grid">
+            <div class="option-btn" onclick="selectOption(this,'1-3 Days')"><div class="option-icon"><i class="fas fa-calendar-day"></i></div><div class="option-label">1–3 Days</div><div class="option-sub">Weekend Trips</div></div>
+            <div class="option-btn" onclick="selectOption(this,'4-5 Days')"><div class="option-icon"><i class="fas fa-calendar-week"></i></div><div class="option-label">4–5 Days</div><div class="option-sub">Short Holidays</div></div>
+            <div class="option-btn" onclick="selectOption(this,'6-8 Days')"><div class="option-icon"><i class="fas fa-calendar-alt"></i></div><div class="option-label">6–8 Days</div><div class="option-sub">Popular Choice</div></div>
+            <div class="option-btn" onclick="selectOption(this,'9+ Days')"><div class="option-icon"><i class="fas fa-calendar"></i></div><div class="option-label">9+ Days</div><div class="option-sub">Grand Tour</div></div>
+            <div class="option-btn" onclick="selectOption(this,'Flexible')"><div class="option-icon"><i class="fas fa-magic"></i></div><div class="option-label">Flexible</div><div class="option-sub">Let us suggest</div></div>
+          </div>
+        </div>
+
+        <div>
+          <label style="font-size:.9rem;font-weight:700;color:var(--dark);display:block;margin-bottom:12px;">Travel Month / Date</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="form-group">
+              <label for="travelMonth" style="font-size:.82rem;">Preferred Month</label>
+              <select id="travelMonth" class="form-control">
+                <option value="">Select Month</option>
+                <option>January</option><option>February</option><option>March</option>
+                <option>April</option><option>May</option><option>June</option>
+                <option>July</option><option>August</option><option>September</option>
+                <option>October</option><option>November</option><option>December</option>
+                <option>Flexible – Any Month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="travelerCount" style="font-size:.82rem;">Number of Travelers</label>
+              <select id="travelerCount" class="form-control">
+                <option>1 Person</option>
+                <option>2 People</option>
+                <option>2 Adults + 1 Child</option>
+                <option>2 Adults + 2 Children</option>
+                <option>4–6 People</option>
+                <option>7–10 People</option>
+                <option>10+ People (Group)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 4: Budget ====== -->
+      <div class="planner-step-panel" id="step4">
+        <div class="planner-step-title">What's your budget per person?</div>
+        <div class="planner-step-sub">This helps us select the right hotels and experiences for you.</div>
+
+        <div class="option-grid" style="margin-bottom:24px;">
+          <div class="option-btn" onclick="selectOption(this,'Budget')"><div class="option-icon">💰</div><div class="option-label">Budget</div><div class="option-sub">₹5,000 – ₹15,000</div></div>
+          <div class="option-btn" onclick="selectOption(this,'Mid-Range')"><div class="option-icon">💎</div><div class="option-label">Mid-Range</div><div class="option-sub">₹15,000 – ₹30,000</div></div>
+          <div class="option-btn selected" onclick="selectOption(this,'Premium')"><div class="option-icon">👑</div><div class="option-label">Premium</div><div class="option-sub">₹30,000 – ₹60,000</div></div>
+          <div class="option-btn" onclick="selectOption(this,'Luxury')"><div class="option-icon">🌟</div><div class="option-label">Luxury</div><div class="option-sub">₹60,000+</div></div>
+        </div>
+
+        <div style="background:var(--gray-100);border-radius:var(--radius);padding:20px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:.85rem;font-weight:600;color:var(--gray-700);">
+            <span>Or set your exact budget:</span>
+            <span id="budgetDisplay2" style="color:var(--primary);">₹30,000 / person</span>
+          </div>
+          <input type="range" class="range-input" id="budgetSlider2" min="5000" max="100000" value="30000" step="1000" style="width:100%;">
+          <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--gray-500);margin-top:6px;">
+            <span>₹5,000</span><span>₹1,00,000+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 5: Your Details ====== -->
+      <div class="planner-step-panel" id="step5">
+        <div class="planner-step-title">Almost there! Tell us about yourself.</div>
+        <div class="planner-step-sub">We'll create a personalized itinerary and send it to you within 2 hours.</div>
+
+        <!-- Summary Box -->
+        <div style="background:var(--primary-light);border-radius:var(--radius);padding:18px;margin-bottom:24px;border:1px solid rgba(0,86,210,.15);">
+          <div style="font-size:.85rem;font-weight:700;color:var(--primary);margin-bottom:12px;"><i class="fas fa-clipboard-list"></i> Your Trip Summary</div>
+          <div class="summary-row"><span class="summary-label">Destination</span><span class="summary-val" id="summDest">—</span></div>
+          <div class="summary-row"><span class="summary-label">Theme</span><span class="summary-val" id="summTheme">—</span></div>
+          <div class="summary-row"><span class="summary-label">Duration</span><span class="summary-val" id="summDuration">—</span></div>
+          <div class="summary-row"><span class="summary-label">Budget</span><span class="summary-val" id="summBudget">—</span></div>
+        </div>
+
+        <form id="plannerForm">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label for="pf-name">Full Name *</label>
+              <input type="text" id="pf-name" class="form-control" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="pf-phone">Phone Number *</label>
+              <input type="tel" id="pf-phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="form-group">
+              <label for="pf-email">Email Address</label>
+              <input type="email" id="pf-email" class="form-control" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="pf-contact">Preferred Contact Time</label>
+              <select id="pf-contact" class="form-control">
+                <option>Any Time</option>
+                <option>Morning (9AM – 12PM)</option>
+                <option>Afternoon (12PM – 4PM)</option>
+                <option>Evening (4PM – 7PM)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pf-notes">Special Requirements / Notes</label>
+            <textarea id="pf-notes" class="form-control" rows="3" placeholder="Any special requirements, dietary preferences, mobility needs, anniversaries, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;" id="plannerSubmit">
+            <i class="fas fa-paper-plane"></i> Get My Personalized Itinerary
+          </button>
+          <p style="text-align:center;font-size:.78rem;color:var(--gray-500);margin-top:10px;">
+            <i class="fas fa-lock"></i> Your information is 100% secure. We never share your data.
+          </p>
+        </form>
+      </div>
+
+      <!-- Navigation -->
+      <div class="planner-nav">
+        <button class="btn btn-outline" id="prevBtn" onclick="changeStep(-1)" style="display:none;">
+          <i class="fas fa-arrow-left"></i> Previous
+        </button>
+        <div></div>
+        <button class="btn btn-primary" id="nextBtn" onclick="changeStep(1)">
+          Next <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Trust Signals -->
+    <div style="display:flex;gap:24px;justify-content:center;margin-top:32px;flex-wrap:wrap;" class="reveal">
+      <div style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray-600);">
+        <i class="fas fa-shield-alt" style="color:var(--success);"></i> 100% Safe & Secure
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray-600);">
+        <i class="fas fa-clock" style="color:var(--primary);"></i> Response in 2 Hours
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray-600);">
+        <i class="fas fa-rupee-sign" style="color:var(--accent);"></i> Best Price Guarantee
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray-600);">
+        <i class="fas fa-star" style="color:var(--accent);"></i> 4.9★ Rated by 10,000+ Travelers
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Multi-step planner logic
+let currentStep = 1;
+const totalSteps = 5;
+const plannerData = { destinations: [], theme: '', duration: '', budget: '' };
+
+function updateStep(step) {
+  document.querySelectorAll('.planner-step-panel').forEach((p, i) => {
+    p.classList.toggle('active', i + 1 === step);
+  });
+  document.querySelectorAll('.step-item').forEach((ind, i) => {
+    ind.classList.remove('active', 'done');
+    if (i + 1 === step) ind.classList.add('active');
+    if (i + 1 < step) { ind.classList.add('done'); ind.querySelector('.step-circle').innerHTML = '<i class="fas fa-check"></i>'; }
+    else ind.querySelector('.step-circle').textContent = i + 1;
+  });
+  document.getElementById('plannerProgress').style.width = (step / totalSteps * 100) + '%';
+  document.getElementById('progressText').textContent = `Step ${step} of ${totalSteps}`;
+  document.getElementById('prevBtn').style.display = step > 1 ? '' : 'none';
+  document.getElementById('nextBtn').style.display = step < totalSteps ? '' : 'none';
+
+  if (step === totalSteps) updateSummary();
+}
+
+function changeStep(dir) {
+  currentStep = Math.max(1, Math.min(totalSteps, currentStep + dir));
+  updateStep(currentStep);
+}
+
+function toggleSelect(el, value) {
+  el.classList.toggle('selected');
+  const icon = el.querySelector('.check-icon');
+  if (icon) icon.style.display = el.classList.contains('selected') ? 'block' : 'none';
+  if (el.classList.contains('selected')) {
+    if (!plannerData.destinations.includes(value)) plannerData.destinations.push(value);
+  } else {
+    plannerData.destinations = plannerData.destinations.filter(d => d !== value);
+  }
+}
+
+function selectOption(el, value) {
+  const group = el.parentElement;
+  group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  const step = parseInt(el.closest('.planner-step-panel').id.replace('step',''));
+  if (step === 2) plannerData.theme = value;
+  if (step === 3) plannerData.duration = value;
+  if (step === 4) plannerData.budget = value;
+}
+
+function updateSummary() {
+  document.getElementById('summDest').textContent = plannerData.destinations.join(', ') || 'Not selected';
+  document.getElementById('summTheme').textContent = plannerData.theme || 'Not selected';
+  document.getElementById('summDuration').textContent = plannerData.duration || 'Not selected';
+  document.getElementById('summBudget').textContent = plannerData.budget || 'Not selected';
+}
+
+// Budget slider
+const slider2 = document.getElementById('budgetSlider2');
+const display2 = document.getElementById('budgetDisplay2');
+if (slider2) {
+  slider2.addEventListener('input', () => {
+    const v = parseInt(slider2.value);
+    display2.textContent = '₹' + v.toLocaleString('en-IN') + ' / person';
+    plannerData.budget = '₹' + v.toLocaleString('en-IN');
+  });
+}
+
+// Form submit
+const plannerForm = document.getElementById('plannerForm');
+if (plannerForm) {
+  plannerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('plannerSubmit');
+    btn.innerHTML = '<i class="fas fa-check"></i> Request Submitted!';
+    btn.style.background = 'var(--success)';
+    btn.disabled = true;
+    setTimeout(() => {
+      alert('Thank you! Our travel expert will call you within 2 hours with a personalized itinerary. 🎉');
+    }, 300);
+  });
+}
+
+updateStep(1);
+</script>
+</body>
+</html>

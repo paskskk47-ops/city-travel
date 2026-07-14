@@ -1,0 +1,13 @@
+# ============================================================
+# CHOOSE TRAVEL - Taka Tak SEO Robots.txt
+# Rank Math SEO & Google Search Console compliant
+# ============================================================
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*?*
+Disallow: /404/
+
+# Sitemap Location
+Sitemap: https://www.choose.travel/sitemap.xml

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found | Choose Travel</title>
+  <meta name="description" content="Oops! The travel page you are looking for does not exist. Return to Choose Travel homepage or search for your dream tour package across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .error-container {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .error-code {
+      font-size: clamp(6rem, 15vw, 11rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 10px;
+      letter-spacing: -3px;
+      text-shadow: 0 10px 30px rgba(0, 86, 210, 0.15);
+    }
+    .error-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    .error-desc {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .error-illustration {
+      max-width: 420px;
+      width: 100%;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body data-page="">
+<div id="site-nav"></div>
+
+<div class="error-container">
+  <div class="error-code">404</div>
+  <h1 class="error-title">Page Not Found</h1>
+  <p class="error-desc">Oops! The page you are looking for does not exist. It might have been moved or the URL might be incorrect.</p>
+  
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html" class="btn btn-accent btn-lg" style="padding:14px 36px;font-size:1.05rem;"><i class="fas fa-home"></i> Go to Home</a>
+    <a href="tour-packages.html" class="btn btn-outline btn-lg" style="padding:14px 36px;font-size:1.05rem;"><i class="fas fa-suitcase-rolling"></i> Explore Packages</a>
+  </div>
+
+  <!-- SVG Travel Mountain Illustration matching the mockup -->
+  <div class="error-illustration">
+    <svg viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sun/Moon -->
+      <circle cx="400" cy="60" r="30" fill="#FEF3E2"/>
+      <!-- Background Mountains -->
+      <path d="M50 200 L160 80 L280 200 Z" fill="#E2E8F0"/>
+      <path d="M180 200 L310 60 L440 200 Z" fill="#CBD5E1"/>
+      <!-- Foreground Mountains -->
+      <path d="M10 200 L130 90 L250 200 Z" fill="#94A3B8"/>
+      <path d="M220 200 L330 110 L480 200 Z" fill="#64748B"/>
+      <!-- Ground / Grass -->
+      <path d="M0 200 H500 V220 H0 V200 Z" fill="#334155"/>
+      <!-- Trees on Left -->
+      <path d="M40 200 L45 170 L50 200 Z" fill="#1E293B"/>
+      <path d="M60 200 L68 155 L76 200 Z" fill="#0F172A"/>
+      <path d="M85 200 L90 175 L95 200 Z" fill="#1E293B"/>
+      <!-- Trees on Right -->
+      <path d="M410 200 L418 160 L426 200 Z" fill="#1E293B"/>
+      <path d="M435 200 L442 145 L450 200 Z" fill="#0F172A"/>
+      <path d="M460 200 L465 170 L470 200 Z" fill="#1E293B"/>
+      <!-- Little Traveler / Sign post -->
+      <rect x="150" y="170" width="4" height="30" fill="#475569"/>
+      <path d="M154 172 L180 180 L154 188 Z" fill="#F5A623"/>
+      <circle cx="130" cy="180" r="6" fill="#F5A623"/>
+      <path d="M127 186 L133 186 L133 200 L127 200 Z" fill="#0056D2"/>
+    </svg>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

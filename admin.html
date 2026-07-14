@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Choose Travel CMS & Lead Portal</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <style>
+    body { background: #F0F4F8; font-family: 'Inter', sans-serif; margin: 0; }
+    .chart-bars { display: flex; align-items: flex-end; gap: 8px; height: 120px; padding: 0 10px; }
+    .bar { flex: 1; border-radius: 6px 6px 0 0; background: var(--primary); opacity: 0.8; transition: opacity .2s; cursor: pointer; position: relative; }
+    .bar:hover { opacity: 1; }
+    .bar-label { text-align: center; font-size: .68rem; color: #718096; margin-top: 4px; }
+    .activity-feed { display: flex; flex-direction: column; gap: 0; }
+    .activity-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #F7FAFC; }
+    .activity-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: .85rem; }
+    .activity-item:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+<div class="admin-wrapper">
+
+  <!-- Sidebar Navigation -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon" style="width:38px;height:38px;font-size:1rem;background:var(--primary);color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;">C</div>
+      <div class="logo-text">
+        <span class="brand-main" style="color:white;font-size:1rem;font-weight:800;">CHOOSE TRAVEL</span>
+        <span class="brand-sub" style="color:rgba(255,255,255,.45);font-size:.7rem;display:block;">Agency Admin Panel</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Main Portal</div>
+      <a class="sidebar-link active" data-section="dashboard" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a class="sidebar-link" data-section="leads" onclick="showSection('leads')"><i class="fas fa-inbox"></i> Lead Management <span class="badge" id="sidebarLeadsBadge">8</span></a>
+      <a class="sidebar-link" data-section="quotes" onclick="showSection('quotes')"><i class="fas fa-file-invoice-dollar"></i> Quote Generator</a>
+
+      <div class="sidebar-section-label">Content CMS</div>
+      <a class="sidebar-link" data-section="destinations" onclick="showSection('destinations')"><i class="fas fa-map-marker-alt"></i> Destinations</a>
+      <a class="sidebar-link" data-section="packages" onclick="showSection('packages')"><i class="fas fa-suitcase-rolling"></i> Tour Packages</a>
+      <a class="sidebar-link" data-section="blogs" onclick="showSection('blogs')"><i class="fas fa-blog"></i> Blog & Articles</a>
+
+      <div class="sidebar-section-label">Configuration</div>
+      <a class="sidebar-link" data-section="settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> Agency Settings</a>
+      <a class="sidebar-link" onclick="window.open('index.html', '_blank')"><i class="fas fa-external-link-alt"></i> View Live Website</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div>Version 2.0.0 &bull; © 2026 Choose Travel</div>
+      <div style="margin-top:4px;color:#27AE60;font-weight:600;"><i class="fas fa-circle" style="font-size:7px;"></i> LocalStorage Active</div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="admin-main">
+
+    <!-- Top Bar -->
+    <div class="admin-topbar">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button id="sidebarToggle" class="topbar-btn" aria-label="Toggle sidebar" style="background:none;border:none;font-size:1.2rem;cursor:pointer;color:#4A5568;"><i class="fas fa-bars"></i></button>
+        <div class="admin-page-title" style="font-size:1.15rem;font-weight:800;color:#0D1B2A;">Dashboard Overview</div>
+      </div>
+      <div class="admin-topbar-right" style="display:flex;align-items:center;gap:14px;">
+        <button class="btn btn-primary btn-sm" onclick="showSection('quotes')" style="padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:700;"><i class="fab fa-whatsapp"></i> Instant Quote</button>
+        <div class="admin-user-chip" style="display:flex;align-items:center;gap:8px;background:#F7FAFC;padding:6px 12px;border-radius:50px;border:1px solid #E2E8F0;">
+          <div class="admin-avatar" style="width:28px;height:28px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;">A</div>
+          <span class="admin-user-name" style="font-size:.85rem;font-weight:700;">Admin User</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Workspace -->
+    <div class="admin-content">
+
+      <!-- ============================================================
+           1. DASHBOARD OVERVIEW SECTION
+           ============================================================ -->
+      <div id="section-dashboard" class="admin-section">
+        <div style="margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <div>
+            <h1 style="font-size:1.4rem;font-weight:800;color:#0D1B2A;margin-bottom:4px;">Good Morning, Travel Expert! 👋</h1>
+            <div style="font-size:.88rem;color:#718096;">Here is your live agency activity and booking pipeline.</div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" onclick="showSection('packages')" style="background:white;"><i class="fas fa-plus"></i> Add Package</button>
+            <button class="btn btn-primary btn-sm" onclick="showSection('leads')"><i class="fas fa-inbox"></i> View All Enquiries</button>
+          </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card" onclick="showSection('leads')" style="cursor:pointer;">
+            <div>
+              <div class="kpi-num" id="kpiTotalLeads">8</div>
+              <div class="kpi-label">Total Customer Leads</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> +15.4% this week</div>
+            </div>
+            <div class="kpi-icon kpi-icon-blue"><i class="fas fa-inbox"></i></div>
+          </div>
+          <div class="kpi-card" onclick="showSection('leads')" style="cursor:pointer;">
+            <div>
+              <div class="kpi-num" id="kpiConfirmed">2</div>
+              <div class="kpi-label">Confirmed Bookings</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> Active tours</div>
+            </div>
+            <div class="kpi-icon kpi-icon-green"><i class="fas fa-check-circle"></i></div>
+          </div>
+          <div class="kpi-card">
+            <div>
+              <div class="kpi-num" id="kpiRevenue">₹0.9L</div>
+              <div class="kpi-label">Est. Monthly Revenue</div>
+              <div class="kpi-change up"><i class="fas fa-arrow-up"></i> +24% vs target</div>
+            </div>
+            <div class="kpi-icon kpi-icon-orange"><i class="fas fa-rupee-sign"></i></div>
+          </div>
+          <div class="kpi-card" onclick="showSection('leads')" style="cursor:pointer;">
+            <div>
+              <div class="kpi-num" id="kpiNewToday">3</div>
+              <div class="kpi-label">New Leads Pending</div>
+              <div class="kpi-change up" style="color:var(--primary);"><i class="fas fa-bell"></i> Action required</div>
+            </div>
+            <div class="kpi-icon kpi-icon-purple"><i class="fas fa-user-clock"></i></div>
+          </div>
+        </div>
+
+        <!-- Quick Actions Grid -->
+        <div class="admin-card" style="margin-bottom:22px;">
+          <div class="admin-card-header"><div class="admin-card-title">Quick Actions Panel</div></div>
+          <div style="padding:16px;">
+            <div class="quick-actions-grid">
+              <button class="quick-action-btn" onclick="showSection('packages')"><i class="fas fa-plus-circle"></i> Add New Package</button>
+              <button class="quick-action-btn" onclick="showSection('quotes')"><i class="fab fa-whatsapp"></i> Generate Quote</button>
+              <button class="quick-action-btn" onclick="addNewLeadModal()"><i class="fas fa-user-plus"></i> Log Manual Lead</button>
+              <button class="quick-action-btn" onclick="showSection('destinations')"><i class="fas fa-map-marked-alt"></i> Manage Destinations</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts & Top Packages Row -->
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:22px;margin-bottom:22px;">
+          <!-- Weekly Trend -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div class="admin-card-title">Weekly Enquiry Trend</div>
+              <span style="font-size:.78rem;color:#718096;font-weight:600;">Last 7 Days</span>
+            </div>
+            <div style="padding:20px;">
+              <div class="chart-bars">
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:60%;"></div><div class="bar-label">Mon</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:85%;background:#27AE60;"></div><div class="bar-label">Tue</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:50%;"></div><div class="bar-label">Wed</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:90%;background:#F5A623;"></div><div class="bar-label">Thu</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:70%;"></div><div class="bar-label">Fri</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:100%;background:#9B59B6;"></div><div class="bar-label">Sat</div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;"><div class="bar" style="height:75%;"></div><div class="bar-label">Sun</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Packages List -->
+          <div class="admin-card">
+            <div class="admin-card-header"><div class="admin-card-title">Top Most Enquired Packages</div></div>
+            <div style="padding:16px;" id="topPackagesList">
+              <!-- Injected by js/admin.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="admin-card">
+          <div class="admin-card-header"><div class="admin-card-title">Recent Agency Activity Stream</div></div>
+          <div style="padding:0 20px;">
+            <div class="activity-feed">
+              <div class="activity-item">
+                <div class="activity-icon" style="background:#EBF5FF;color:#0056D2;"><i class="fas fa-user-plus"></i></div>
+                <div>
+                  <div style="font-size:.88rem;font-weight:600;">New Lead Logged: Priya Sharma</div>
+                  <div style="font-size:.78rem;color:#718096;">Requested Kerala Backwaters Tour – 4 Adults</div>
+                </div>
+                <span style="margin-left:auto;font-size:.75rem;color:#718096;">Today</span>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon" style="background:#E8F8F0;color:#27AE60;"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div style="font-size:.88rem;font-weight:600;">Booking Confirmed: Anita Mehta</div>
+                  <div style="font-size:.78rem;color:#718096;">Coorg Honeymoon Package – ₹22,000 received</div>
+                </div>
+                <span style="margin-left:auto;font-size:.75rem;color:#718096;">Yesterday</span>
+              </div>
+              <div class="activity-item" style="border-bottom:none;">
+                <div class="activity-icon" style="background:#FEF3E2;color:#F5A623;"><i class="fas fa-suitcase-rolling"></i></div>
+                <div>
+                  <div style="font-size:.88rem;font-weight:600;">Package Updated: Himachal Snow Adventure</div>
+                  <div style="font-size:.78rem;color:#718096;">Offer price updated to ₹21,999</div>
+                </div>
+                <span style="margin-left:auto;font-size:.75rem;color:#718096;">2 days ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           2. LEADS MANAGEMENT SECTION
+           ============================================================ -->
+      <div id="section-leads" class="admin-section" style="display:none;">
+        <div class="admin-card">
+          <div class="admin-card-header" style="flex-wrap:wrap;gap:14px;">
+            <div>
+              <div class="admin-card-title" style="font-size:1.1rem;">Customer Enquiries & Lead Pipeline</div>
+              <div style="font-size:.78rem;color:#718096;" id="leadsCountText">Showing all leads</div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+              <div style="position:relative;">
+                <i class="fas fa-search" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#718096;font-size:.8rem;"></i>
+                <input type="text" id="leadSearchInput" placeholder="Search name, phone, package..." style="padding:8px 12px 8px 32px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:.85rem;outline:none;width:220px;">
+              </div>
+              <select id="leadStatusFilter" style="padding:8px 12px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:.85rem;outline:none;background:white;font-weight:600;">
+                <option value="All">All Statuses</option>
+                <option value="New">New Leads</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Follow-up">Follow-up</option>
+                <option value="Booked">Booked (Converted)</option>
+                <option value="Closed">Closed</option>
+              </select>
+              <button class="btn btn-primary btn-sm" onclick="addNewLeadModal()"><i class="fas fa-plus"></i> Add Manual Lead</button>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Lead ID</th>
+                  <th>Customer Name & Email</th>
+                  <th>Phone Number</th>
+                  <th>Requested Package</th>
+                  <th>Travel Date</th>
+                  <th>Pax</th>
+                  <th>Status</th>
+                  <th>Submitted</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="leadsTableBody">
+                <!-- Injected by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           3. TOUR PACKAGES MANAGEMENT SECTION
+           ============================================================ -->
+      <div id="section-packages" class="admin-section" style="display:none;">
+        <div style="display:grid;grid-template-columns:1fr;gap:24px;">
+          <!-- Table of Existing Packages -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div class="admin-card-title">Published Tour Packages</div>
+              <button class="btn btn-primary btn-sm" onclick="document.getElementById('addPackageCard').scrollIntoView({behavior:'smooth'})"><i class="fas fa-plus"></i> Create New Package</button>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Package Title & Duration</th>
+                    <th>Destination</th>
+                    <th>Price (Offer / Regular)</th>
+                    <th>Status</th>
+                    <th>Enquiries</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="packagesTableBody">
+                  <!-- Injected by js/admin.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Add New Package Form -->
+          <div class="admin-card" id="addPackageCard">
+            <div class="admin-card-header"><div class="admin-card-title"><i class="fas fa-plus-circle" style="color:var(--primary);margin-right:6px;"></i> Add New Tour Package</div></div>
+            <div style="padding:24px;">
+              <form id="addPackageForm">
+                <div class="admin-form-grid">
+                  <div class="form-group-admin">
+                    <label>Package Title *</label>
+                    <input type="text" name="pkgTitle" placeholder="e.g. Kerala Luxury Houseboat Escape" required>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Primary Destination *</label>
+                    <select name="pkgDest">
+                      <option value="Kerala">Kerala</option>
+                      <option value="Andaman">Andaman</option>
+                      <option value="Goa">Goa</option>
+                      <option value="Kashmir">Kashmir</option>
+                      <option value="Himachal">Himachal Pradesh</option>
+                      <option value="Rajasthan">Rajasthan</option>
+                      <option value="South India">South India (Ooty/Coorg)</option>
+                    </select>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Duration *</label>
+                    <input type="text" name="pkgDuration" placeholder="e.g. 5 Days / 4 Nights" required>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Category / Theme</label>
+                    <select name="pkgCategory">
+                      <option value="Family">Family Tour</option>
+                      <option value="Honeymoon">Honeymoon Special</option>
+                      <option value="Adventure">Adventure & Hills</option>
+                      <option value="Weekend">Weekend Getaway</option>
+                      <option value="Luxury">Luxury & Wellness</option>
+                    </select>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Regular MRP Price (₹)</label>
+                    <input type="number" name="pkgRegPrice" placeholder="e.g. 24000" required>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Special Offer Price (₹) *</label>
+                    <input type="number" name="pkgOfferPrice" placeholder="e.g. 18999" required>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Special Offer Badge Text (Discounts/Deals)</label>
+                    <input type="text" name="pkgOfferText" placeholder="e.g. 🔥 25% OFF Summer Sale">
+                  </div>
+                  <div class="form-group-admin form-group-full">
+                    <label>Package Image URL or Photo Link *</label>
+                    <input type="url" name="pkgImage" placeholder="https://images.unsplash.com/... (or choose any high-res photo link)">
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Publish Status</label>
+                    <select name="pkgStatus">
+                      <option value="Published">Published (Live)</option>
+                      <option value="Draft">Draft (Hidden)</option>
+                    </select>
+                  </div>
+                  <div class="form-group-admin">
+                    <label>Show on Home Page Featured?</label>
+                    <select>
+                      <option value="Yes">Yes, Feature on Homepage</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div style="margin-top:24px;display:flex;gap:12px;">
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save & Publish Package</button>
+                  <button type="reset" class="btn btn-outline">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           4. QUOTATION & ITINERARY BUILDER SECTION
+           ============================================================ -->
+      <div id="section-quotes" class="admin-section" style="display:none;">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title"><i class="fab fa-whatsapp" style="color:#25D366;font-size:1.2rem;margin-right:6px;"></i> Instant WhatsApp Quotation Generator</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="font-size:.9rem;color:#4A5568;margin-top:0;margin-bottom:20px;">Quickly generate customized WhatsApp itineraries and price quotations for client inquiries in 1 click.</p>
+            <form id="quoteGeneratorForm">
+              <div class="admin-form-grid">
+                <div class="form-group-admin">
+                  <label>Customer Name *</label>
+                  <input type="text" name="qClientName" placeholder="e.g. Priya Sharma" required>
+                </div>
+                <div class="form-group-admin">
+                  <label>Destination / Package Title *</label>
+                  <input type="text" name="qDest" placeholder="e.g. Kerala Backwaters & Munnar Hills" required>
+                </div>
+                <div class="form-group-admin">
+                  <label>Travel Duration</label>
+                  <input type="text" name="qDays" placeholder="e.g. 5 Days / 4 Nights">
+                </div>
+                <div class="form-group-admin">
+                  <label>Number of Travelers</label>
+                  <input type="text" name="qPax" placeholder="e.g. 2 Adults, 1 Child">
+                </div>
+                <div class="form-group-admin">
+                  <label>Hotel Tier & Category</label>
+                  <input type="text" name="qHotels" placeholder="e.g. 3-Star Premium Hotels + Houseboat with AC">
+                </div>
+                <div class="form-group-admin">
+                  <label>Vehicle / Transport Provided</label>
+                  <input type="text" name="qCab" placeholder="e.g. Private AC Sedan (Swift Dzire / Etios) for entire trip">
+                </div>
+                <div class="form-group-admin form-group-full">
+                  <label>Final Package Cost (₹) *</label>
+                  <input type="text" name="qPrice" placeholder="e.g. ₹22,500 Total / per couple including all taxes" required>
+                </div>
+              </div>
+              <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary" style="background:#25D366;border-color:#25D366;"><i class="fab fa-whatsapp"></i> Generate & Copy WhatsApp Quotation</button>
+                <button type="button" class="btn btn-outline" onclick="window.print()"><i class="fas fa-print"></i> Print PDF Quotation</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           5. DESTINATIONS MANAGEMENT SECTION
+           ============================================================ -->
+      <div id="section-destinations" class="admin-section" style="display:none;">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">Destinations Directory</div>
+            <button class="btn btn-primary btn-sm" onclick="addNewDestinationModal()"><i class="fas fa-plus"></i> Add Destination</button>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Destination Name</th>
+                  <th>Region</th>
+                  <th>Active Packages</th>
+                  <th>Customer Rating</th>
+                  <th>Status</th>
+                  <th>Settings</th>
+                </tr>
+              </thead>
+              <tbody id="destinationsTableBody">
+                <!-- Injected by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           6. BLOG & ARTICLES MANAGEMENT SECTION
+           ============================================================ -->
+      <div id="section-blogs" class="admin-section" style="display:none;">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="admin-card-title">SEO Blog Articles & Guides</div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Write New Blog Modal open')"><i class="fas fa-pen"></i> Write New Article</button>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Article Title</th>
+                  <th>Category</th>
+                  <th>Author</th>
+                  <th>Published Date</th>
+                  <th>Views</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="blogsTableBody">
+                <!-- Injected by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           7. AGENCY & SEO SETTINGS SECTION
+           ============================================================ -->
+      <div id="section-settings" class="admin-section" style="display:none;">
+        <div class="admin-card">
+          <div class="admin-card-header"><div class="admin-card-title">Agency Contact & SEO Configuration</div></div>
+          <div style="padding:24px;">
+            <form onsubmit="event.preventDefault(); alert('✅ Agency settings successfully saved to LocalStorage!');">
+              <div class="admin-form-grid">
+                <div class="form-group-admin">
+                  <label>Agency Name</label>
+                  <input type="text" value="Choose Travel">
+                </div>
+                <div class="form-group-admin">
+                  <label>Primary Phone Number</label>
+                  <input type="text" value="+91 98765 43210">
+                </div>
+                <div class="form-group-admin">
+                  <label>Official WhatsApp Number</label>
+                  <input type="text" value="919876543210">
+                </div>
+                <div class="form-group-admin">
+                  <label>Support Email Address</label>
+                  <input type="email" value="info@choosetravel.in">
+                </div>
+                <div class="form-group-admin form-group-full">
+                  <label>Default SEO Title Tag</label>
+                  <input type="text" value="Choose Travel – Best Tour Operator & Holiday Packages in India">
+                </div>
+                <div class="form-group-admin form-group-full">
+                  <label>Default Meta Description</label>
+                  <textarea rows="3">Discover unforgettable holiday experiences with Choose Travel. Book verified family tours, honeymoon packages, and adventure itineraries across Kerala, Kashmir, Andaman, Goa & more.</textarea>
+                </div>
+              </div>
+              <div style="margin-top:24px;">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Configuration</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
