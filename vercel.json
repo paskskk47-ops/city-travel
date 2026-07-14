@@ -1,0 +1,56 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/about-us", "destination": "/about.html" },
+    { "source": "/about-us/", "destination": "/about.html" },
+    { "source": "/destinations", "destination": "/destinations.html" },
+    { "source": "/destinations/", "destination": "/destinations.html" },
+    { "source": "/destinations/kerala", "destination": "/destination-detail.html" },
+    { "source": "/destinations/kerala/", "destination": "/destination-detail.html" },
+    { "source": "/tour-packages", "destination": "/tour-packages.html" },
+    { "source": "/tour-packages/", "destination": "/tour-packages.html" },
+    { "source": "/tour-packages/kerala-family-tour", "destination": "/package-detail.html" },
+    { "source": "/tour-packages/kerala-family-tour/", "destination": "/package-detail.html" },
+    { "source": "/travel-themes", "destination": "/travel-themes.html" },
+    { "source": "/travel-themes/", "destination": "/travel-themes.html" },
+    { "source": "/travel-guides", "destination": "/travel-guides.html" },
+    { "source": "/travel-guides/", "destination": "/travel-guides.html" },
+    { "source": "/travel-guides/kerala-complete-guide", "destination": "/guide-detail.html" },
+    { "source": "/travel-guides/kerala-complete-guide/", "destination": "/guide-detail.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/gallery/", "destination": "/gallery.html" },
+    { "source": "/testimonials", "destination": "/testimonials.html" },
+    { "source": "/testimonials/", "destination": "/testimonials.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/", "destination": "/blog.html" },
+    { "source": "/blog/top-10-places-to-visit-in-kerala", "destination": "/blog-detail.html" },
+    { "source": "/blog/top-10-places-to-visit-in-kerala/", "destination": "/blog-detail.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/faq/", "destination": "/faq.html" },
+    { "source": "/contact-us", "destination": "/contact.html" },
+    { "source": "/contact-us/", "destination": "/contact.html" },
+    { "source": "/plan-your-trip", "destination": "/plan-your-trip.html" },
+    { "source": "/plan-your-trip/", "destination": "/plan-your-trip.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy.html" },
+    { "source": "/refund-policy", "destination": "/refund-policy.html" },
+    { "source": "/refund-policy/", "destination": "/refund-policy.html" },
+    { "source": "/terms-conditions", "destination": "/terms-conditions.html" },
+    { "source": "/terms-conditions/", "destination": "/terms-conditions.html" },
+    { "source": "/search", "destination": "/search-results.html" },
+    { "source": "/search/", "destination": "/search-results.html" },
+    { "source": "/admin/dashboard", "destination": "/admin/dashboard.html" },
+    { "source": "/admin/dashboard/", "destination": "/admin/dashboard.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
