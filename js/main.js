@@ -349,7 +349,7 @@ function initSearchForm() {
     if (dest) params.set('destination', dest);
     if (date) params.set('date', date);
     if (travelers) params.set('travelers', travelers);
-    window.location.href = `tour-packages.html?${params.toString()}`;
+    window.location.href = `/tour-packages/?${params.toString()}`;
   });
 }
 

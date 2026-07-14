@@ -31,7 +31,7 @@ const NAV_HTML = `
   <div class="container">
     <nav class="navbar">
       <a href="/" class="logo" style="display:flex;align-items:center;text-decoration:none;">
-        <img src="image (1).png" alt="Choose Travel" class="brand-logo-img" style="height:52px;width:auto;object-fit:contain;display:block;" />
+        <img src="/image (1).png" alt="Choose Travel" class="brand-logo-img" style="height:52px;width:auto;object-fit:contain;display:block;" />
       </a>
 
       <ul class="nav-menu" id="navMenu">
@@ -101,8 +101,8 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="logo footer-logo" style="margin-bottom:16px;display:inline-flex;align-items:center;text-decoration:none;">
-          <img src="image (1).png" alt="Choose Travel" class="brand-logo-img" style="height:58px;width:auto;object-fit:contain;display:block;" />
+        <a href="/" class="logo footer-logo" style="margin-bottom:16px;display:inline-flex;align-items:center;text-decoration:none;">
+          <img src="/image (1).png" alt="Choose Travel" class="brand-logo-img" style="height:58px;width:auto;object-fit:contain;display:block;" />
         </a>
         <p class="footer-brand-desc">Your trusted travel partner across India. We craft unforgettable holiday experiences with the best destinations, packages, and service since 2015.</p>
         <div class="footer-social">
@@ -161,9 +161,9 @@ const FOOTER_HTML = `
     <div class="footer-bottom">
       <p>© <span class="current-year"></span> Choose Travel. All rights reserved. Designed with ❤️ in India.</p>
       <div class="footer-bottom-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-conditions.html">Terms & Conditions</a>
-        <a href="refund-policy.html">Refund Policy</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms-conditions/">Terms & Conditions</a>
+        <a href="/refund-policy/">Refund Policy</a>
       </div>
     </div>
   </div>
@@ -286,7 +286,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'privacy-policy.html': '/privacy-policy/',
       'refund-policy.html': '/refund-policy/',
       'terms-conditions.html': '/terms-conditions/',
-      'admin/dashboard.html': '/admin/dashboard/'
+      'admin/dashboard.html': '/admin/dashboard/',
+      'search-results.html': '/search/'
     };
 
     if (window.location.protocol !== 'file:') {
@@ -635,9 +636,9 @@ function initChooseTravelSearchFilters() {
         const destInput = heroSearchForm.querySelector('input[name="q"], input[placeholder*="Destination"], input[type="text"]');
         const destVal = destInput ? destInput.value.trim().toLowerCase() : '';
         if (destVal) {
-          window.location.href = `tour-packages.html?dest=${encodeURIComponent(destVal)}`;
+          window.location.href = `/tour-packages/?dest=${encodeURIComponent(destVal)}`;
         } else {
-          window.location.href = `tour-packages.html`;
+          window.location.href = `/tour-packages/`;
         }
       });
     }

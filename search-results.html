@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search Results for "Kerala" | Choose Travel</title>
   <meta name="description" content="Browse search results for Kerala tour packages, destinations, travel guides, and itineraries on Choose Travel.">
@@ -228,7 +229,7 @@ if (searchPageForm) {
     e.preventDefault();
     const val = document.getElementById('searchInputField').value.trim();
     if (val) {
-      window.location.href = `search-results.html?q=${encodeURIComponent(val)}`;
+      window.location.href = `/search/?q=${encodeURIComponent(val)}`;
     }
   });
 }
